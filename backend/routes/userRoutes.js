@@ -1,6 +1,6 @@
 const express = require('express');
 const userController = require('../controller/userController');
-const upload = require('../utils/upload.js'); // Make sure this path is correct
+const upload = require('../utils/upload.js'); 
 
 const router = express.Router();
 
