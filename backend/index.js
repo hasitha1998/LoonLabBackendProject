@@ -14,6 +14,14 @@ db.once('open', () => {
 // Middleware
 app.use(express.json());
 
+// Session configuration
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET || 'secret', 
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 // Routes
 app.use('/users', userRoutes);
 

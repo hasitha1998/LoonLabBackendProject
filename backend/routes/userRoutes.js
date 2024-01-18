@@ -8,6 +8,6 @@ const router = express.Router();
 router.post('/register', upload.single('profilepic'), userController.registerUser);
 
 // User login route
-router.post('/login', userController.loginUser);
+router.post('/login', upload.single(null),userController.loginUser);
 
 module.exports = router;
